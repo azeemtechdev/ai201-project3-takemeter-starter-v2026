@@ -51,63 +51,48 @@ whether you hit them:
 
 ---
 
-## 1.
+## 1. Overall accuracy on the held-out test set is at least 0.65 across all three seeds.
 
 <!-- Your criterion. It must name a number. -->
 
-
-
 **Why this target:**
-
-
+With three labels (`tactical_analysis`, `hot_take`, and `banter`), random guessing gets 0.33 and guessing our biggest class (`hot_take` at 39%) gets 0.39. Setting the bar at 0.65 means the model has to beat the majority baseline by 26 percentage points while still being realistic enough to hold across all three random seeds on a 200-post dataset.
 
 ---
 
-## 2.
+## 2. The `tactical_analysis` label achieves an F1 score of at least 0.65 on the held-out set across all three seeds.
 
 <!-- Your criterion. -->
 
-
-
 **Why this target:**
-
-
+The main point of TakeMeter on `r/soccer` is finding real tactical commentary buried in post-match noise. Because our decision rule ties `tactical_analysis` to specific checkable words (stats like xG, formations, and pressing), the model has clear clues to learn from, so it should hit at least 0.65 F1.
 
 ---
 
-## 3.
+## 3. Our smallest label (`banter`) achieves an F1 score of at least 0.55 on the held-out set across all three seeds.
 
 <!-- Your criterion. -->
 
-
-
 **Why this target:**
-
-
+`banter` is our smallest category at around 58 examples, which leaves only about 9 to 11 examples in the test split. Because a couple of sarcastic soccer jokes ("masterclass", "football heritage") can easily look like serious posts and swing the score on a small test split across three seeds, 0.55 is a fair floor compared to 0.65 for our larger labels.
 
 ---
 
-## 4.
+## 4. No single label makes up more than 45% of `labels.csv`, and every label has at least 50 examples.
 
 <!-- Your criterion. -->
 
-
-
 **Why this target:**
-
-
+On `r/soccer`, emotional `hot_take` posts naturally dominate match threads, so capping the largest label at 45% (well below the 70% project limit) stops the model from lazily guessing `hot_take` every time. Requiring at least 50 examples per label ensures that even our smallest class gets at least 8 to 10 examples in the test split.
 
 ---
 
-## 5.
+## 5. Human agreement rate on the 30-post staff evaluation set in Unit 6 is at least 70% (21 out of 30 posts).
 
 <!-- Your criterion. -->
 
-
-
 **Why this target:**
-
-
+Internet comments often mix sarcasm with real opinions, so two people rarely agree 100% of the time. Agreeing on at least 21 out of 30 posts proves I applied written boundary rules consistently rather than guessing based on mood.
 
 ---
 
@@ -136,7 +121,7 @@ whether you hit them:
      you the point:
 
          ✗ "Overall accuracy of at least 0.65" → "at least 0.55", because
-            0.65 turned out to be optimistic for 200 examples.
+           0.65 turned out to be optimistic for 200 examples.
 
      A number you missed stays where it is, gets diagnosed, and gets a fix
      attempted. That's where the points are.
