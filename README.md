@@ -75,7 +75,7 @@ If a post mentions a specific checkable stat (like xG or pass completion) or a s
 
 **Where the posts came from:** Public post-match threads and daily discussion threads on `r/soccer` (Reddit).
 
-**How I labelled them:** Cold by hand directly into a spreadsheet, evaluating each row against the hardest boundary decision rule and documenting ambiguous phrasing in the `note` column.
+**How I labelled them:** I labelled the first 20 posts cold by hand using only my written definitions and decision rule (marked `cold` in the `note` column), then used AI pre-labelling for the remaining 180 posts and manually reviewed and verified every row against the Mechanism Rule.
 
 **Counts per label:**
 
@@ -120,10 +120,9 @@ If a post mentions a specific checkable stat (like xG or pass completion) or a s
 **Anything I changed from the defaults, and why:** Kept the default hyperparameters provided in the starter notebook. With a 200-example dataset, 3 epochs at a 2e-5 learning rate prevents catastrophic forgetting of the pre-trained weights while providing sufficient gradient updates to separate the three labels.
 
 **Split sizes:** 
-* Train: 160 examples (80%)
-* Test: 40 examples (20% held-out stratified split)
-  * Test split counts: `tactical_analysis`: 13, `hot_take`: 16, `banter`: 11.
-  * All labels maintain at least 11 samples in the test split, remaining above the threshold of 8 to limit variance in evaluation metrics.
+* Train: 140 examples (70%) / Val: 30 examples (15%) / Test: 30 examples (15% held-out stratified split)
+  * Test split counts: `tactical_analysis`: 10, `hot_take`: 11, `banter`: 9.
+  * Every label has at least 9 examples in the test split, keeping all three classes above the 8-example variance floor.
 
 ---
 
@@ -142,7 +141,7 @@ If a post mentions a specific checkable stat (like xG or pass completion) or a s
 - *What I changed:* Tuned the Macro F1 threshold to >= 0.70 and specified a minority-class recall target (>= 0.60) to prevent the classifier from ignoring the `banter` class to inflate overall accuracy.
 
 **Pre-labelling disclosure:**
-No automated AI pre-labelling was used for the dataset. All 200 comments were sourced from public Reddit threads and hand-labelled one by one directly into `labels.csv` to ensure consistent application of the hardest boundary rule.
+After labelling the first 20 examples cold by hand, I used an AI assistant with my three label definitions and the Mechanism Rule to pre-label the remaining 180 `r/soccer` comments, then manually inspected and verified each row and note in `labels.csv`.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 

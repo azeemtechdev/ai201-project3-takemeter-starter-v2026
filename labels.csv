@@ -1,0 +1,201 @@
+text,label,note
+Midfield was completely invisible for 90 minutes. Zero tracking back from the wingers leaving the fullbacks isolated against overloads.,tactical_analysis,cold - hard case 1: heated tone but names specific wing tracking and overload mechanism
+0.12 xG from 14 shots.,tactical_analysis,cold - hard case 3: pure checkable metric showing poor shot quality
+"They shifted into an asymmetrical back three in possession, letting the right wingback push up to pin the fullback while the double pivot covered transition spaces.",tactical_analysis,cold - clear structural breakdown
+He completed only 68% of his forward passes today because the opposition mid-block cut off central passing lanes and forced him into contested wide balls.,tactical_analysis,cold - cites pass completion stat and mid-block mechanism
+Playing a high defensive line against runners with 34-year-old center-backs is pure tactical suicide.,tactical_analysis,cold - borderline tone but explains pace mismatch vs high line
+Subbing off the lone pivot when defending a 1-0 lead left the backline exposed on central cutbacks.,tactical_analysis,cold - explains substitution impact on Zone 14 cutbacks
+0.14 xG in 90 minutes against a 19th-place side is completely inexcusable.,tactical_analysis,cold - harsh tone but grounded in checkable xG figure
+"Sell him in January, he is completely washed and has never cared about playing for this badge.",hot_take,cold - pure emotional dismissal without data
+This manager is a fraudulent coward who will have us fighting relegation by Christmas.,hot_take,cold - unargued prediction and personal attack
+Our midfield was completely overrun and looked like Sunday league players all match.,hot_take,cold - borderline complaint with zero causal mechanism
+Haaland is just a glorified tap-in merchant who ghosts every big final.,hot_take,cold - classic unargued player label
+"He's our worst signing since 1998, absolutely zero impact since arriving.",hot_take,cold - rhetorical hyperbole with no tactical substance
+Anyone still defending this board deserves ten more years of mediocrity.,hot_take,cold - sweeping fan generalization
+"Terminate his contract tonight, I never want to see him wear this shirt again.",hot_take,cold - extreme knee-jerk reaction
+Tiki-taka into walking the ball into the net while down 2-0. Masterclass in possession football.,banter,cold - hard case 2: uses tactical words sarcastically as a joke
+Football heritage. We are so back.,banter,cold - classic forum meme phrase
+Can he do it on a cold rainy night in Stoke though?,banter,cold - quintessential football cliché joke
+Tiki-taka into 80% possession with 1 shot on target. Masterclass in football.,banter,cold - sarcastic mockery using stats for humor
+Ref needs his bank account checked immediately.,banter,cold - stock forum joke about referee
+Bald fraud status: confirmed once again.,banter,cold - popular subreddit meme
+"Their press worked in the first half because the striker curved his run to block the pass to the left center-back, forcing long balls into midfield.",tactical_analysis,pre-labeled - reviewed: clear pressing trigger explanation
+Inverting the right fullback into central midfield gave them a 3v2 numerical advantage against our two central midfielders.,tactical_analysis,pre-labeled - reviewed: names inverted fullback and 3v2 overload
+We conceded both goals on defensive transitions because both fullbacks were ahead of the ball when possession was lost in the middle third.,tactical_analysis,pre-labeled - reviewed: explains rest defense failure
+Look at the pass map: zero progressive passes through the central corridor between minutes 45 and 75.,tactical_analysis,pre-labeled - reviewed: cites pass map and time window
+Dropping the false nine into midfield pulled their center-backs out of position and opened the channel for the inside forwards to run into.,tactical_analysis,pre-labeled - reviewed: describes false nine decoy movement
+They switched from a 4-3-3 to a compact 5-4-1 out of possession after the 60th minute to protect the half-spaces.,tactical_analysis,pre-labeled - reviewed: cites formation change and half-space protection
+"Our goalkeeper's long distribution was 4 for 19 today, which meant we turned the ball over every time they pressed our goal kicks.",tactical_analysis,pre-labeled - reviewed: cites distribution numbers and press impact
+"The defensive line dropped ten yards deeper in the second half, inviting pressure and increasing the distance our wingers had to carry the ball.",tactical_analysis,pre-labeled - reviewed: explains line depth and transition distance
+"He had 11 ball recoveries and 4 interceptions in the defensive third, completely shutting down their left-sided combinations.",tactical_analysis,pre-labeled - reviewed: cites defensive stats and pitch zone
+Using a man-oriented press in midfield worked until their goalkeeper started bypassing the press with direct diagonals to the target man.,tactical_analysis,pre-labeled - reviewed: explains man-marking press vs direct balls
+We generated 2.45 xG from open play but underperformed because four of those chances were taken from tight angles inside the six-yard box.,tactical_analysis,pre-labeled - reviewed: links xG figure to shot angles
+"Their left winger stayed wide on the touchline to stretch our back four horizontally, creating a huge gap between right-back and center-back.",tactical_analysis,pre-labeled - reviewed: describes width stretching defensive spacing
+"The double pivot stood on the same horizontal line all game, making it too easy for one vertical pass to split both of them.",tactical_analysis,pre-labeled - reviewed: identifies flat midfield spacing flaw
+Bringing on a physical target striker allowed us to go direct and win 70% of aerial duels in the final twenty minutes.,tactical_analysis,pre-labeled - reviewed: cites aerial duel rate and tactical adjustment
+"They targeted our backup left-back with early switches of play, isolating him 1v1 nine times in the first half alone.",tactical_analysis,pre-labeled - reviewed: explains switch of play targeting weak defender
+Our expected threat from crosses was near zero because we kept floating high balls against two 6ft 4in center-backs instead of hitting low cutbacks.,tactical_analysis,pre-labeled - reviewed: contrasts cross types against aerial defense
+"By pinning their defensive midfielder with two attacking #8s in the half-spaces, we forced their wingers to drop deep and defend.",tactical_analysis,pre-labeled - reviewed: explains half-space pinning mechanics
+The high press lost intensity after minute 65; PPDA went from 7.2 in the first half to 14.8 in the second half.,tactical_analysis,pre-labeled - reviewed: cites PPDA metric drop across halves
+Playing two left-footed center-backs ruined our build-up angles on the right side because every pass had to come back inside.,tactical_analysis,pre-labeled - reviewed: explains footedness effect on build-up angles
+He only touched the ball 18 times in 90 minutes because the midfield failed to progress possession past their first line of pressure.,tactical_analysis,pre-labeled - reviewed: links low striker touches to build-up failure
+Our zonal marking on corners leaves the penalty spot completely unguarded whenever two blockers screen the six-yard box.,tactical_analysis,pre-labeled - reviewed: identifies set-piece zonal weakness
+Shifting the #10 out to the left wing created a 3v2 overload with the overlapping fullback and forced their right winger to play as an auxiliary defender.,tactical_analysis,pre-labeled - reviewed: explains wide overload creation
+"They defended in a narrow 4-4-2 block with only 25 meters between the defensive line and the strikers, squeezing all space between the lines.",tactical_analysis,pre-labeled - reviewed: cites vertical compactness in 4-4-2
+"Every time our center-back stepped into midfield with the ball, nobody rotated to cover the space behind him.",tactical_analysis,pre-labeled - reviewed: explains defensive rotation gap
+We won the midfield battle because our #6 consistently checked his shoulder and played one-touch passes around their pressing trap.,tactical_analysis,pre-labeled - reviewed: describes press resistance technique
+Their counter-press recovered possession within 5 seconds on 8 separate occasions in our defensive half.,tactical_analysis,pre-labeled - reviewed: cites counter-pressing recovery stat
+Playing a natural winger at wingback backfired because he failed to track the opposition's underlapping runs three times before the goal.,tactical_analysis,pre-labeled - reviewed: identifies defensive tracking failure on underlaps
+"We had 64% possession, but 72% of our passes were completed in our own half between the center-backs and the goalkeeper.",tactical_analysis,pre-labeled - reviewed: breaks down sterile possession stats
+The manager's decision to switch to a diamond midfield gave us control centrally but left our fullbacks defending 1v2 against their wide players.,tactical_analysis,pre-labeled - reviewed: explains diamond midfield width trade-off
+Their striker kept drifting into the right channel to drag our slower center-back out into wide areas where he struggles to turn.,tactical_analysis,pre-labeled - reviewed: explains striker channel movement
+"Our pressing trap on the touchline worked well: wait for the backwards pass to the fullback, then jump with the winger and near-side #8.",tactical_analysis,pre-labeled - reviewed: details touchline pressing trigger
+Conceding 19 shots from inside the box over two matches shows the midfield shield is not screening the back four.,tactical_analysis,pre-labeled - reviewed: cites shots in box stat and midfield screening
+"He created 5 key passes today, four of which came from early crosses hit before the defensive line could reset.",tactical_analysis,pre-labeled - reviewed: cites key passes and early cross timing
+"Without a true holding midfielder, our rest defense was just two center-backs standing on the halfway line against three fast counter-attackers.",tactical_analysis,pre-labeled - reviewed: explains rest defense numerical disadvantage
+They neutralized our build-up by man-marking the double pivot and letting our center-back with weaker distribution have all the time on the ball.,tactical_analysis,pre-labeled - reviewed: explains pressing bait on weaker passer
+"The offside trap caught them 6 times in the first half, reducing their direct balls over the top to zero completed passes.",tactical_analysis,pre-labeled - reviewed: cites offside trap count and pass prevention
+Moving the striker to the far post on crosses allowed him to attack the blind side of the fullback rather than competing with the center-backs.,tactical_analysis,pre-labeled - reviewed: explains blind-side far-post movement
+Our midfielders received the ball facing our own goal 80% of the time instead of scanning and receiving on the half-turn.,tactical_analysis,pre-labeled - reviewed: describes body orientation in midfield
+Their second goal came directly from a second-ball recovery after our midfield failed to close down the edge of the box following a cleared corner.,tactical_analysis,pre-labeled - reviewed: explains second-phase set-piece breakdown
+He completed 9 of 11 take-ons because our right-back kept backing off instead of engaging him before he built up speed.,tactical_analysis,pre-labeled - reviewed: cites take-on stats and 1v1 defending distance
+Using the goalkeeper as an extra center-back in build-up created a +1 overload against their two-man front press.,tactical_analysis,pre-labeled - reviewed: explains goalkeeper +1 build-up overload
+We lost control after the 70th minute because the substitutes failed to maintain the compact distances between midfield and attack.,tactical_analysis,pre-labeled - reviewed: explains spacing loss after substitutions
+"Their winger tucked inside to act as a second #10, which freed up the entire flank for the overlapping wingback.",tactical_analysis,pre-labeled - reviewed: describes inside winger and overlapping wingback
+Only 2 shots on target from 22 attempts because we kept shooting from 25 yards out against a packed low block.,tactical_analysis,pre-labeled - reviewed: links shot volume vs low-probability distance
+The third-man runs from deep midfield were the only thing breaking their offside line in the first 45 minutes.,tactical_analysis,pre-labeled - reviewed: identifies third-man run mechanism
+Defending with a high line works only when there is pressure on the ball; today we kept a high line with zero midfield pressure on the passer.,tactical_analysis,pre-labeled - reviewed: explains unpressured ball vs high line flaw
+He won 8 out of 9 ground duels and completed 94% of his passes under high pressure in the central third.,tactical_analysis,pre-labeled - reviewed: cites duel and pass completion statistics
+"Their low block conceded the wide areas intentionally, knowing we didn't have an aerial presence in the box to convert crosses.",tactical_analysis,pre-labeled - reviewed: explains low block concession of wide zones
+Switching the wingers to their natural sides in the second half stopped them from cutting inside into traffic and increased byline cutbacks.,tactical_analysis,pre-labeled - reviewed: explains natural winger profile impact
+"Our center-backs were split too wide during goal kicks, leaving a massive central lane if the defensive midfielder lost possession.",tactical_analysis,pre-labeled - reviewed: explains goal-kick spacing risk
+They bypassed our high press by playing quick bounce passes—striker drops to lay it off one-touch to the midfielder facing forward.,tactical_analysis,pre-labeled - reviewed: describes up-back-through press bypass
+Conceding 2.1 xG on set pieces alone in three games points to a clear issue with how we track runners from the edge of the box.,tactical_analysis,pre-labeled - reviewed: cites set-piece xG and runner tracking
+"The left-back tucked into a back three while the right-back pushed into midfield, forming a 3-2-5 shape in settled possession.",tactical_analysis,pre-labeled - reviewed: details 3-2-5 in-possession structure
+He was caught offside four times because he started his runs before the midfielder lifted his head to play the through ball.,tactical_analysis,pre-labeled - reviewed: explains run timing vs passer cues
+Pressing in a 4-2-4 left our two central midfielders covering 50 meters of width whenever their fullbacks beat the first press.,tactical_analysis,pre-labeled - reviewed: explains 4-2-4 midfield width exposure
+Our transition attack slowed down every time the ball went wide because the winger waited for the fullback instead of driving 1v1.,tactical_analysis,pre-labeled - reviewed: explains transition tempo slowdown
+"They overloaded our left side with four players to draw the block across, then hit a diagonal switch to the isolated right winger.",tactical_analysis,pre-labeled - reviewed: describes overload-to-isolate mechanism
+"Worst refereeing performance in the history of the sport, the league is completely corrupt.",hot_take,pre-labeled - reviewed: emotional referee rant
+We are genuinely the worst coached team in Europe and it isn't even close.,hot_take,pre-labeled - reviewed: hyperbolic assertion without evidence
+"Bench the entire starting eleven and play the academy kids on Saturday, at least they will run.",hot_take,pre-labeled - reviewed: reactive emotional demand
+He wouldn't even start for a mid-table second division side right now.,hot_take,pre-labeled - reviewed: exaggerated player critique
+"Title race is 100% over in October, pack it up and focus on next season.",hot_take,pre-labeled - reviewed: premature sweeping prediction
+Spending 80 million on him should result in the sporting director going to prison.,hot_take,pre-labeled - reviewed: transfer fee rant with no analysis
+"This squad has zero mentality, a bunch of overpaid mercenaries jogging around for 90 minutes.",hot_take,pre-labeled - reviewed: cliché mentality complaint
+"If the manager isn't sacked before he reaches the tunnel, the owners have given up on the club.",hot_take,pre-labeled - reviewed: reactive sacking demand
+"He is the most overrated midfielder of his generation, pure PR merchant.",hot_take,pre-labeled - reviewed: unargued rating claim
+"Zero passion, zero pride, worst performance I have witnessed in thirty years of supporting this club.",hot_take,pre-labeled - reviewed: pure emotional venting
+"Every single summer signing has been a complete flop, fire the entire scouting department.",hot_take,pre-labeled - reviewed: sweeping condemnation
+He plays one good game every three months and coasted on reputation for the last four seasons.,hot_take,pre-labeled - reviewed: unsupported consistency claim
+"Modern football is completely dead, every team just passes sideways until someone falls asleep.",hot_take,pre-labeled - reviewed: broad complaint about modern football
+Our captain is an absolute disgrace and should be stripped of the armband immediately.,hot_take,pre-labeled - reviewed: emotional reaction to captain
+No top player will ever sign for us again after watching this pathetic display.,hot_take,pre-labeled - reviewed: dramatic future prediction
+He is a championship-level defender masquerading as a top-flight starter.,hot_take,pre-labeled - reviewed: unargued talent insult
+"The manager has completely lost the dressing room, you can tell nobody wants to play for him.",hot_take,pre-labeled - reviewed: speculative dressing room claim
+We played like cowards from the first whistle and deserved to lose by five.,hot_take,pre-labeled - reviewed: emotional match summary
+"Give him a lifetime contract right now, he is already the best winger in the world.",hot_take,pre-labeled - reviewed: extreme positive recency bias
+"Our goalkeeper couldn't catch a cold right now, absolute liability every single week.",hot_take,pre-labeled - reviewed: hyperbolic criticism
+This club is finished at the highest level as long as these owners are in charge.,hot_take,pre-labeled - reviewed: sweeping ownership doomerism
+He only shows up against relegation fodder and disappears whenever we play a real team.,hot_take,pre-labeled - reviewed: unargued big-game claim
+"Worst substitute appearance I have ever seen, he actively made us look like we had ten men.",hot_take,pre-labeled - reviewed: emotional critique of sub
+Any manager with half a brain wins this league by ten points with this squad.,hot_take,pre-labeled - reviewed: unsupported managerial claim
+"He is completely finished at the top level, his legs went two years ago.",hot_take,pre-labeled - reviewed: unbacked physical decline claim
+I would rather watch paint dry than watch another 90 minutes of this terrorist football.,hot_take,pre-labeled - reviewed: pure frustration venting
+Sell the entire back four in the summer and start from scratch.,hot_take,pre-labeled - reviewed: knee-jerk squad overhaul demand
+"He has zero football IQ, just runs fast into blind alleys every single time.",hot_take,pre-labeled - reviewed: insults player intelligence without tactical breakdown
+"The referee handed them three points on a silver platter, absolute robbery.",hot_take,pre-labeled - reviewed: emotional officiating complaint
+"We are getting relegated playing like this, there aren't three worse teams in the league.",hot_take,pre-labeled - reviewed: reactive relegation panic
+He is a system player who would get exposed immediately in a real physical league.,hot_take,pre-labeled - reviewed: unargued league comparison take
+"Our striker couldn't finish his dinner right now, absolute donkey in front of goal.",hot_take,pre-labeled - reviewed: pure insult over missed chances
+Hiring this manager set the club back five years minimum.,hot_take,pre-labeled - reviewed: unquantified long-term claim
+He is easily a top three player in history and anyone disagreeing doesn't watch the sport.,hot_take,pre-labeled - reviewed: absolute GOAT claim with gatekeeping
+"Pathetic mentality from top to bottom, they always bottle it when the pressure is on.",hot_take,pre-labeled - reviewed: sweeping mentality generalization
+Leaving him on the bench for 85 minutes is a sackable offense on its own.,hot_take,pre-labeled - reviewed: angry complaint about sub timing without tactical detail
+Our academy is completely useless if we keep buying mediocre squad players for 40 million.,hot_take,pre-labeled - reviewed: recruitment complaint
+He is the worst pound-for-pound transfer in football history.,hot_take,pre-labeled - reviewed: extreme historical hyperbole
+"They celebrated a draw like they won the Champions League, small club mentality.",hot_take,pre-labeled - reviewed: emotional tribal dismissal
+"Our medical staff must be training the players with sledgehammers, fire all of them.",hot_take,pre-labeled - reviewed: angry injury rant
+"He hasn't beaten a single defender since 2023, completely useless winger.",hot_take,pre-labeled - reviewed: exaggerated complaint with rhetorical date
+"This team would lose to a Sunday pub side right now, zero cohesion.",hot_take,pre-labeled - reviewed: hyperbolic team criticism
+He cares more about his haircut and Instagram sponsorships than winning football matches.,hot_take,pre-labeled - reviewed: personal narrative attack
+"VAR has completely ruined the sport, just scrap the whole thing tomorrow.",hot_take,pre-labeled - reviewed: sweeping anti-VAR rant
+The league is a total farmer's league when one team wins it every single season without trying.,hot_take,pre-labeled - reviewed: dismissive league generalization
+"He is only starting because of his price tag, any honest manager drops him months ago.",hot_take,pre-labeled - reviewed: speculative selection complaint
+We will never win another trophy while this board runs the recruitment.,hot_take,pre-labeled - reviewed: absolute future prediction
+"Absolute disasterclass from the manager today, got schooled from minute one to ninety.",hot_take,pre-labeled - reviewed: evaluative adjectives with no tactical detail
+He is a luxury player who offers nothing when we don't have the ball.,hot_take,pre-labeled - reviewed: broad label without specific match mechanism
+Our wingers couldn't cross a road today let alone cross a football into the box.,hot_take,pre-labeled - reviewed: angry hyperbole about crossing
+"Three losses in a row against bottom-half teams is completely unforgivable, time to go.",hot_take,pre-labeled - reviewed: results-based sacking demand
+He is the sole reason we didn't win the league last year and he's doing it again.,hot_take,pre-labeled - reviewed: scapegoating one player
+"Most spineless away performance of the season, refund every single travelling fan tonight.",hot_take,pre-labeled - reviewed: emotional fan reaction
+He is a stat-padder who only scores when we are already three goals up.,hot_take,pre-labeled - reviewed: unargued player narrative
+Our defense parts like the Red Sea every time the opponent crosses the halfway line.,hot_take,pre-labeled - reviewed: metaphorical complaint without structural mechanics
+Bringing on a defender when we need a goal shows this manager has a small-club mindset.,hot_take,pre-labeled - reviewed: mindset critique without tactical explanation
+He has been dining out on one good tournament for three straight years.,hot_take,pre-labeled - reviewed: unargued career take
+"Zero creativity in this team, we could play for six hours and still not score.",hot_take,pre-labeled - reviewed: frustrated exaggeration
+He is far too arrogant for someone who hasn't won a major trophy in his career.,hot_take,pre-labeled - reviewed: personality critique
+"This referee makes everything about himself every single week, demote him to the fourth tier.",hot_take,pre-labeled - reviewed: referee venting
+We always collapse in the second half because the fitness coaching at this club is amateur.,hot_take,pre-labeled - reviewed: unverified claim about fitness staff
+"He is the biggest diver in the league, embarrassing to watch a grown man fall over like that.",hot_take,pre-labeled - reviewed: emotional complaint about simulation
+"If we sell him to a rival, the fans should boycott the stadium for the rest of the season.",hot_take,pre-labeled - reviewed: transfer outrage
+"Our midfield moves like they are running in quicksand, zero athleticism in the whole squad.",hot_take,pre-labeled - reviewed: descriptive insult without mechanics
+"He wouldn't get a minute at any other top-six club, yet we treat him like an undroppable star.",hot_take,pre-labeled - reviewed: unargued squad status claim
+"This is the worst title defense in top-flight history, complete collapse from top to bottom.",hot_take,pre-labeled - reviewed: sweeping historical hyperbole
+"He is completely terrified of shooting, always passes the responsibility to someone else.",hot_take,pre-labeled - reviewed: psychological speculation
+Another transfer window wasted buying injury-prone rejects from rival clubs.,hot_take,pre-labeled - reviewed: broad transfer rant
+The manager is too stubborn to admit his system doesn't work in this league.,hot_take,pre-labeled - reviewed: vague system complaint without specifying mechanics
+"He has negative composure in the box, panics every time he sees the goalkeeper.",hot_take,pre-labeled - reviewed: emotional finishing complaint
+"Blow the whole squad up in June, only two players in this eleven deserve to stay.",hot_take,pre-labeled - reviewed: extreme rebuild demand
+Great goal tag missing for that 40-yard row Z clearance.,banter,pre-labeled - reviewed: sarcastic joke about bad shot
+"Never rated football anyway, cricket has always been my real passion.",banter,pre-labeled - reviewed: self-deprecating fan coping joke
+Stop the count! End the season right now while we are top of the table.,banter,pre-labeled - reviewed: meme reference
+I fell to my knees in Tesco watching that miss.,banter,pre-labeled - reviewed: common internet copy-pasta joke
+ChatGPT could pick a better starting lineup than this.,banter,pre-labeled - reviewed: humorous one-liner
+Give him the Ballon d'Or right now for that nutmeg alone.,banter,pre-labeled - reviewed: ironic exaggeration
+My grandmother would have buried that tap-in and she uses a walker.,banter,pre-labeled - reviewed: classic hyperbole joke
+"Proper brexit tackle that, game's not gone.",banter,pre-labeled - reviewed: recurring r/soccer catchphrase
+He kicked that ball straight to the International Space Station.,banter,pre-labeled - reviewed: joke about skied penalty
+"Friendship ended with the league, domestic cup is my new best friend.",banter,pre-labeled - reviewed: meme template adaptation
+"Check the grass length and wind speed, clearly why we lost today.",banter,pre-labeled - reviewed: parody of manager excuses
+"Look at me, we are the banter club now.",banter,pre-labeled - reviewed: meme quote reference
+"Calculated assist, definitely didn't just shin it by accident.",banter,pre-labeled - reviewed: ironic praise for lucky deflection
+"Unclench, everyone. Never in doubt for a single second.",banter,pre-labeled - reviewed: ironic relief after nervy win
+Prime Maldini has posters of our backup right-back on his bedroom wall.,banter,pre-labeled - reviewed: ironic goat praise
+"We scored a goal from a corner, check outside to see if pigs are flying.",banter,pre-labeled - reviewed: self-deprecating humor
+Here before the post-match thread gets locked in five minutes.,banter,pre-labeled - reviewed: meta forum chatter
+"Lads, it's history repeating itself right on schedule.",banter,pre-labeled - reviewed: adaptation of famous locker room quote
+My cardiologist is going to buy a second yacht thanks to this defense.,banter,pre-labeled - reviewed: joke about stressful defending
+"Puskas award locked up in October, pack it in boys.",banter,pre-labeled - reviewed: ironic Puskas joke for scrappy goal
+"He hit the corner flag with a shot from the penalty spot, elite precision.",banter,pre-labeled - reviewed: sarcastic accuracy joke
+Communicado Oficial: pain and suffering.,banter,pre-labeled - reviewed: club announcement meme
+"We are staying up, say we are staying up! (It is matchday 4).",banter,pre-labeled - reviewed: ironic chant reference
+That pass had so much snow on it when it came down.,banter,pre-labeled - reviewed: humorous commentary on high ball
+"Scriptwriters getting lazy this season, we already saw this exact episode in April.",banter,pre-labeled - reviewed: TV scriptwriter joke
+Park the bus? We parked the entire airport terminal in front of the box.,banter,pre-labeled - reviewed: comedic exaggeration
+He sent the defender to the shops for a pint of milk with that fake shot.,banter,pre-labeled - reviewed: slang humor for dribble
+"Another clean sheet for the post, best goalkeeper in the league this season.",banter,pre-labeled - reviewed: joke about hitting the woodwork
+"Delete club, restart from the last save file.",banter,pre-labeled - reviewed: video game save-scum joke
+I am once again asking our strikers to hit the rectangular white thing with the net.,banter,pre-labeled - reviewed: meme reference about missing shots
+0 days since our last circus moment at the back.,banter,pre-labeled - reviewed: workplace safety sign joke
+"Statue outside the stadium before kickoff next week, I don't make the rules.",banter,pre-labeled - reviewed: ironic overreaction joke
+They are playing hot potato with the football in the six-yard box.,banter,pre-labeled - reviewed: humorous visual comparison
+"Cancel the open-top bus parade, we just conceded to a 17-year-old debutant.",banter,pre-labeled - reviewed: self-mocking fan humor
+Man woke up today and chose violence with that two-footed slide tackle.,banter,pre-labeled - reviewed: internet slang joke
+"New manager bounce lasted a whole 14 minutes, new world record.",banter,pre-labeled - reviewed: sarcastic joke
+That defensive line was straighter in my Sunday league hangover games.,banter,pre-labeled - reviewed: comedic comparison
+He has been watching too many YouTube highlight reels before kickoff.,banter,pre-labeled - reviewed: lighthearted joke about failed skill
+"Wait, we are allowed to score more than one goal in a match? Is that legal?",banter,pre-labeled - reviewed: ironic surprise from fan
+"Someone unplug the controller, the defender is stuck running into the advertising board.",banter,pre-labeled - reviewed: FIFA video game joke
+Every neutral watching this 0-0 deserves financial compensation for lost time.,banter,pre-labeled - reviewed: joke about boring match
+Peak comedy watching four defenders collide while the striker walks it in.,banter,pre-labeled - reviewed: humor about slapstick goal
+He celebrated that offside goal for three full minutes before looking at the flag.,banter,pre-labeled - reviewed: humorous observation
+Corner taken quickly... straight out for a goal kick on the other side.,banter,pre-labeled - reviewed: parody of famous commentary
+Subbing on the backup goalkeeper at striker would genuinely offer more hold-up play.,banter,pre-labeled - reviewed: comedic hyperbole
+"Tears in my eyes, we actually completed three consecutive passes in their half.",banter,pre-labeled - reviewed: ironic celebration
+"He tried the bicycle kick and missed the ball by two feet, 10/10 for artistic effort.",banter,pre-labeled - reviewed: lighthearted mockery
+Just fell asleep during the build-up play and woke up to the same center-backs passing it.,banter,pre-labeled - reviewed: joke about slow possession
+Our xG (expected groans per minute) is off the charts today.,banter,pre-labeled - reviewed: pun on xG metric
+Hand him a blank check and the keys to the city after that last-minute clearance.,banter,pre-labeled - reviewed: playful exaggeration
+Even the stadium pigeon on the wing made better runs into the box today.,banter,pre-labeled - reviewed: classic stadium animal joke
+Today I feel depressed. Tomorrow I will also feel depressed.,banter,pre-labeled - reviewed: parody of famous FIFA speech
