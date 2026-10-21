@@ -27,7 +27,7 @@
 
 ## What This Does
 
-This classifier sorts user comments from `r/soccer` (Reddit match threads and daily discussions) into three clear signal categories: `tactical_analysis`, `hot_take`, and `banter`. Online football forums are flooded with thousands of emotional reactions and recycled memes after every match, which buries thoughtful breakdowns. TakeMeter separates substantive tactical observations from reactive venting and casual chatter, allowing users to filter for genuine insight or quickly isolate match banter.
+This classifier sorts user comments from `r/soccer` (Reddit match threads and daily discussions) into three clear categories: `tactical_analysis`, `hot_take`, and `banter`. Online football forums are flooded with thousands of emotional reactions and jokes after every match, which buries thoughtful breakdowns. TakeMeter separates actual tactical observations from angry venting and casual jokes.
 
 ---
 
@@ -35,7 +35,7 @@ This classifier sorts user comments from `r/soccer` (Reddit match threads and da
 
 ### `tactical_analysis`
 
-**Definition:** The post explains an on-pitch dynamic, player performance, or coaching decision by citing specific tactical mechanisms, physical positioning, phases of play, or match statistics.
+**Definition:** The post explains match events, player performance, or coaching decisions by pointing to specific formations, pitch positioning, phases of play, or match stats.
 
 **Example 1:**
 > "They shifted into an asymmetrical back three in possession, letting the right wingback push up to pin the fullback while the double pivot covered transition spaces."
@@ -45,7 +45,7 @@ This classifier sorts user comments from `r/soccer` (Reddit match threads and da
 
 ### `hot_take`
 
-**Definition:** The post presents an extreme evaluative opinion, emotional reaction, or sweeping generalization about a player, club, or manager without providing concrete tactical mechanics or verifiable data.
+**Definition:** The post makes an extreme claim, emotional complaint, or bold prediction about a player, club, or manager without giving any stats or tactical reasons.
 
 **Example 1:**
 > "Sell him in January, he is completely washed and has never cared about playing for this badge."
@@ -55,7 +55,7 @@ This classifier sorts user comments from `r/soccer` (Reddit match threads and da
 
 ### `banter`
 
-**Definition:** The post is humorous commentary, an inside forum joke, a meme reference, celebration chanting, or low-effort social filler with no analytical intent.
+**Definition:** The post is a joke, a meme, sarcastic mockery, or a short one-liner with no serious argument.
 
 **Example 1:**
 > "Football heritage. We are so back."
@@ -68,8 +68,7 @@ This classifier sorts user comments from `r/soccer` (Reddit match threads and da
 **Which two labels:** `tactical_analysis` vs. `hot_take`
 
 **The decision rule I used every time:**
-If a post states a strong critical judgment but explicitly cites a verifiable tactical action (e.g., pressing triggers, passing angles, defensive structure) or a recorded match metric (e.g., xG, touches, completion rates), classify it as `tactical_analysis`, even if the tone is frustrated or abrasive. If the post only states *that* someone played poorly or made a mistake using evaluative adjectives ("useless", "clueless", "disaster") without explaining the tactical *how* or *why*, classify it as `hot_take`.
-
+If a post mentions a specific checkable stat (like xG or pass completion) or a specific tactical action on the pitch (like pressing, high defensive line, or passing lanes), it is `tactical_analysis`—even if the person sounds angry. If the post just insults a player or manager without saying *how* or *why* tactically, it is `hot_take`.
 ---
 
 ## The Dataset
