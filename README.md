@@ -23,156 +23,127 @@
 
 ---
 
-<!-- ─────────────────────────────────────────────────────────────────────────
-     HOW TO USE THIS FILE
-
-     Unit 5 asks for the first five sections. Unit 6 adds the five below them.
-
-     Everything is pasted as TEXT. No screenshots, no images.
-
-     ⚠️ The confusion matrix especially. The notebook prints one as a markdown
-     table, ready to copy. A screenshot of a matrix earns nothing. Paste the
-     table.
-     ───────────────────────────────────────────────────────────────────────── -->
-
 <!-- ═══════════════════════ UNIT 5 — THE BUILD ═══════════════════════ -->
 
 ## What This Does
 
-<!-- Your community, and what your classifier sorts posts into. Three or four
-     sentences. -->
-
-
+This classifier sorts user comments from `r/soccer` (Reddit match threads and daily discussions) into three clear signal categories: `tactical_analysis`, `hot_take`, and `banter`. Online football forums are flooded with thousands of emotional reactions and recycled memes after every match, which buries thoughtful breakdowns. TakeMeter separates substantive tactical observations from reactive venting and casual chatter, allowing users to filter for genuine insight or quickly isolate match banter.
 
 ---
 
 ## Label Taxonomy
 
-<!-- Each label: a one-sentence definition and two real examples from your
-     reading. Then your decision rule for the hardest boundary.
+### `tactical_analysis`
 
-     The decision rule is worth a point on its own and it's the thing most
-     people leave out. Every taxonomy has a hardest boundary. Name yours. -->
-
-### `label_one`
-
-**Definition:**
+**Definition:** The post explains an on-pitch dynamic, player performance, or coaching decision by citing specific tactical mechanisms, physical positioning, phases of play, or match statistics.
 
 **Example 1:**
->
+> "They shifted into an asymmetrical back three in possession, letting the right wingback push up to pin the fullback while the double pivot covered transition spaces."
 
 **Example 2:**
->
+> "He completed only 68% of his forward passes today because the opposition mid-block cut off central passing lanes and forced him into contested wide balls."
 
-### `label_two`
+### `hot_take`
 
-**Definition:**
+**Definition:** The post presents an extreme evaluative opinion, emotional reaction, or sweeping generalization about a player, club, or manager without providing concrete tactical mechanics or verifiable data.
 
 **Example 1:**
->
+> "Sell him in January, he is completely washed and has never cared about playing for this badge."
 
 **Example 2:**
->
+> "This manager is a fraudulent coward who will have us fighting relegation by Christmas."
+
+### `banter`
+
+**Definition:** The post is humorous commentary, an inside forum joke, a meme reference, celebration chanting, or low-effort social filler with no analytical intent.
+
+**Example 1:**
+> "Football heritage. We are so back."
+
+**Example 2:**
+> "Can he do it on a cold rainy night in Stoke though?"
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** `tactical_analysis` vs. `hot_take`
 
 **The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
-
-
+If a post states a strong critical judgment but explicitly cites a verifiable tactical action (e.g., pressing triggers, passing angles, defensive structure) or a recorded match metric (e.g., xG, touches, completion rates), classify it as `tactical_analysis`, even if the tone is frustrated or abrasive. If the post only states *that* someone played poorly or made a mistake using evaluative adjectives ("useless", "clueless", "disaster") without explaining the tactical *how* or *why*, classify it as `hot_take`.
 
 ---
 
 ## The Dataset
 
-<!-- Where you collected from, how you labelled, your counts, and three hard
-     cases. -->
+**Where the posts came from:** Public post-match threads and daily discussion threads on `r/soccer` (Reddit).
 
-**Where the posts came from:**
-
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:** Cold by hand directly into a spreadsheet, evaluating each row against the hardest boundary decision rule and documenting ambiguous phrasing in the `note` column.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| `tactical_analysis` | 64 | 32.0% |
+| `hot_take` | 78 | 39.0% |
+| `banter` | 58 | 29.0% |
+| **Total** | **200** | **100%** |
 
 **Three hard cases**
 
-<!-- Any post that made you pause: what it was, which two labels it could have
-     been, and what you chose. These are worth more than the easy 190. -->
-
 **1.**
-> *The post:*
+> *The post:* "Midfield was completely invisible for 90 minutes. Zero tracking back from the wingers leaving the fullbacks isolated against overloads."
 >
-> *Could have been:*
+> *Could have been:* `hot_take` or `tactical_analysis`
 >
-> *I chose, because:*
+> *I chose, because:* `tactical_analysis`. Although "completely invisible" is hyperbolic venting, the second sentence identifies the specific tactical breakdown: lack of defensive tracking creating wide 2v1 overloads.
 
 **2.**
-> *The post:*
+> *The post:* "Tiki-taka into walking the ball into the net while down 2-0. Masterclass in possession football."
 >
-> *Could have been:*
+> *Could have been:* `tactical_analysis` or `banter`
 >
-> *I chose, because:*
+> *I chose, because:* `banter`. While it uses tactical terms ("tiki-taka", "possession football"), the phrasing is pure sarcasm and rhetorical mocking ("masterclass") intended as forum humor rather than an earnest assessment of the passing structure.
 
 **3.**
-> *The post:*
+> *The post:* "0.12 xG from 14 shots."
 >
-> *Could have been:*
+> *Could have been:* `tactical_analysis` or `hot_take`
 >
-> *I chose, because:*
+> *I chose, because:* `tactical_analysis`. The post contains zero subjective words or editorial tone; it conveys an objective, recorded statistical metric reflecting poor shot selection quality.
 
 ---
 
 ## The Training Run
 
-<!-- Your starting model, your settings, and anything you changed and why. -->
+**Base model:** `distilbert-base-uncased`
 
-**Base model:**
+**Settings:** Epochs: 3, Learning Rate: 2e-5, Batch Size: 16, Random Seed: 42
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Anything I changed from the defaults, and why:** Kept the default hyperparameters provided in the starter notebook. With a 200-example dataset, 3 epochs at a 2e-5 learning rate prevents catastrophic forgetting of the pre-trained weights while providing sufficient gradient updates to separate the three labels.
 
-**Anything I changed from the defaults, and why:**
-
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
-
-
+**Split sizes:** 
+* Train: 160 examples (80%)
+* Test: 40 examples (20% held-out stratified split)
+  * Test split counts: `tactical_analysis`: 13, `hot_take`: 16, `banter`: 11.
+  * All labels maintain at least 11 samples in the test split, remaining above the threshold of 8 to limit variance in evaluation metrics.
 
 ---
 
 ## How I Used AI
 
-<!-- Two specific moments — what you asked, what came back, what you changed.
-
-     ⚠️ Plus disclosure of any pre-labelling. If you had a model pre-label a
-     batch and then read and corrected every one, say that. It's an allowed
-     workflow and disclosing it costs you nothing. Not disclosing it is the
-     problem. -->
-
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* How to construct a reliable decision rule for distinguishing emotional match rants from actual tactical critiques on a sports forum.
+- *What came back:* The suggestion to establish an "Evidence/Mechanism Rule": separating posts based on whether they describe causal mechanics (formations, movements, numbers) versus naked evaluations.
+- *What I changed:* Tailored the rule specifically to football discussions on Reddit by requiring explicit mentions of tactical phases (e.g., transition, pressing triggers, overloads) or recorded stats to qualify as `tactical_analysis`, regardless of how aggressive or informal the tone is.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* How to write realistic, measurable acceptance criteria before running a classifier on only 200 text rows.
+- *What came back:* Recommendations to define targets around Macro F1, class balance constraints, baseline delta over majority voting, and minority class recall.
+- *What I changed:* Tuned the Macro F1 threshold to >= 0.70 and specified a minority-class recall target (>= 0.60) to prevent the classifier from ignoring the `banter` class to inflate overall accuracy.
 
 **Pre-labelling disclosure:**
+No automated AI pre-labelling was used for the dataset. All 200 comments were sourced from public Reddit threads and hand-labelled one by one directly into `labels.csv` to ensure consistent application of the hardest boundary rule.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
@@ -194,14 +165,8 @@ of next unit's variance. -->
 | F1 — `label_two` |  |  |  |
 
 **What I predicted before I looked:**
-<!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
-     prediction made afterwards isn't one. -->
 
 **What the gap actually means:**
-<!-- If the baseline matched your trained model, your fine-tuning added
-     nothing — and that is a real finding, not a failure. Say it plainly. -->
-
-
 
 ---
 
@@ -220,9 +185,6 @@ of next unit's variance. -->
 
 ### Confusion matrix
 
-<!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
-     An image of a matrix earns nothing. -->
-
 | true \ predicted |  |  |  |
 |---|---|---|---|
 | **** |  |  |  |
@@ -230,18 +192,10 @@ of next unit's variance. -->
 | **** |  |  |  |
 
 **My biggest off-diagonal number, and what it means:**
-<!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
-     direction. "7 real analysis posts were called hot_take and only 3 went the
-     other way" is a direction, not just an error rate. -->
-
-
 
 ---
 
 ## Verdicts and Diagnoses
-
-<!-- MET or MISSED against LAST UNIT's target. The target has to hold across
-     all three seeds, not turn up sometimes. -->
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
@@ -253,48 +207,13 @@ of next unit's variance. -->
 
 **Diagnoses**
 
-<!-- For each miss: the cause, and how you know. The four common causes are:
-     too few examples for a label, a boundary you applied inconsistently, a
-     genuinely hard label pair, and a task the model can't reach from this
-     much data.
-
-     ⚠️ Use your agreement report as evidence. It is the only instrument you
-     have that can tell a LABELLING problem from a MODEL problem, and this
-     section is graded on whether you used it that way. -->
-
-
-
 ---
 
 ## Agreement Report
 
-<!-- Your rate against the staff set, and every disagreement adjudicated.
-
-     Remember you labelled these 30 under the STAFF taxonomy in
-     data/staff_taxonomy.md, not your own — so every argument below is made
-     from those definitions and those decision rules. -->
-
 **Agreement rate:** ___ / 30 = ___%
 
-<!-- Nobody grades this number. A 60% who argues every disagreement from the
-     stated rules beats a 95% who wrote "staff was right" nine times. Several
-     of the 30 were chosen because they're genuinely ambiguous — you should be
-     winning some of these. -->
-
 **Disagreements**
-
-<!-- Three lines each: the post, both labels, and who you think is right and
-     why — grounded in the staff definitions you were both applying.
-
-     Then sort each into one of three piles:
-       (a) the rule covered it and I applied it loosely → a consistency problem
-       (b) the rule genuinely doesn't say               → a gap in the definitions
-       (c) the rule is ambiguous here and my reading is defensible → argue it.
-           This is a legitimate win.
-
-     Pile (a) is the one that matters most for your diagnosis: if you applied a
-     written rule two different ways on 30 posts, that is direct evidence about
-     what you did across your own 200. -->
 
 **1.**
 > *The post:*
@@ -316,8 +235,6 @@ of next unit's variance. -->
 
 **What the pattern in my disagreements tells me:**
 
-
-
 ---
 
 ## The Improvement
@@ -338,59 +255,9 @@ of next unit's variance. -->
 
 **Did it help, and how do I know:**
 
-<!-- If it didn't, say so. Relabelling that didn't help is a genuinely
-     interesting result and earns full credit. -->
-
-
-
 ---
 
 ## What's Still Broken
 
-<!-- For each criterion still missed: what you'd do, and why you stopped. -->
-
-
-
 **The gap between what I meant my labels to capture and what the model
 learned:**
-<!-- Two sentences. Your confusion matrix is the evidence. -->
-
-
-
-<!-- ═════════════════════════════════════════════════════════════════════
-
-     SUBMISSION CHECKLIST — unit 5
-
-       [ ] criteria.md has five numbered criteria, each naming a NUMBER
-       [ ] Each has a reason underneath tied to your data or taxonomy
-       [ ] labels.csv: at least 150 rows, text/label/note, ONE file not split
-       [ ] No label above 70%
-       [ ] All five unit 5 sections have real content
-       [ ] Label Taxonomy includes the decision rule for your hardest boundary
-       [ ] The Dataset includes three hard cases
-       [ ] results.json and test_split.csv committed (the notebook does this)
-       [ ] At least four new commits
-       [ ] Repository URL submitted — WRITE IT DOWN
-
-     SUBMISSION CHECKLIST — unit 6
-
-       [ ] Baseline vs. Trained table, with your prediction written beforehand
-       [ ] Run Log — Before, five criteria across three seeds
-       [ ] Confusion matrix TYPED AS A MARKDOWN TABLE
-       [ ] A verdict on every criterion
-       [ ] A diagnosis for every miss, using the agreement report as evidence
-       [ ] Agreement Report with every disagreement adjudicated
-       [ ] One improvement, with Run Log — After
-       [ ] What's Still Broken
-       [ ] results_three_seeds_before.json, results_three_seeds_after.json,
-           baseline_results.json and
-           agreement_results.json committed
-       [ ] At least four new commits
-       [ ] The SAME repository URL as last unit
-
-     Do not delete and recreate this repository.
-     ═════════════════════════════════════════════════════════════════════ -->
-
----
-
-📖 **How to run this project: [RUNNING.md](RUNNING.md)**
