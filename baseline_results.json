@@ -1,0 +1,184 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.7,
+    "f1_macro": 0.5462962962962963,
+    "per_label": {
+      "banter": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9
+      },
+      "hot_take": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889,
+        "support": 12
+      },
+      "tactical_analysis": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.7499999999999999,
+        "support": 9
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "Blow the whole squad up in June, only two players in this eleven deserve to stay.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "He only touched the ball 18 times in 90 minutes because the midfield failed to progress possession past their first line of pressure.",
+      "gold": "tactical_analysis",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Playing a high defensive line against runners with 34-year-old center-backs is pure tactical suicide.",
+      "gold": "tactical_analysis",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "They are playing hot potato with the football in the six-yard box.",
+      "gold": "banter",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "That defensive line was straighter in my Sunday league hangover games.",
+      "gold": "banter",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "We will never win another trophy while this board runs the recruitment.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "Our midfield moves like they are running in quicksand, zero athleticism in the whole squad.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "He cares more about his haircut and Instagram sponsorships than winning football matches.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "He kicked that ball straight to the International Space Station.",
+      "gold": "banter",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "He has zero football IQ, just runs fast into blind alleys every single time.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "Conceding 19 shots from inside the box over two matches shows the midfield shield is not screening the back four.",
+      "gold": "tactical_analysis",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Today I feel depressed. Tomorrow I will also feel depressed.",
+      "gold": "banter",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "They shifted into an asymmetrical back three in possession, letting the right wingback push up to pin the fullback while the double pivot covered transition spaces.",
+      "gold": "tactical_analysis",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Midfield was completely invisible for 90 minutes. Zero tracking back from the wingers leaving the fullbacks isolated against overloads.",
+      "gold": "tactical_analysis",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Our goalkeeper's long distribution was 4 for 19 today, which meant we turned the ball over every time they pressed our goal kicks.",
+      "gold": "tactical_analysis",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Anyone still defending this board deserves ten more years of mediocrity.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "Worst refereeing performance in the history of the sport, the league is completely corrupt.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "The referee handed them three points on a silver platter, absolute robbery.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "Haaland is just a glorified tap-in merchant who ghosts every big final.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "Tears in my eyes, we actually completed three consecutive passes in their half.",
+      "gold": "banter",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Calculated assist, definitely didn't just shin it by accident.",
+      "gold": "banter",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Our academy is completely useless if we keep buying mediocre squad players for 40 million.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "Playing two left-footed center-backs ruined our build-up angles on the right side because every pass had to come back inside.",
+      "gold": "tactical_analysis",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Never rated football anyway, cricket has always been my real passion.",
+      "gold": "banter",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "We are staying up, say we are staying up! (It is matchday 4).",
+      "gold": "banter",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "This manager is a fraudulent coward who will have us fighting relegation by Christmas.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "They overloaded our left side with four players to draw the block across, then hit a diagonal switch to the isolated right winger.",
+      "gold": "tactical_analysis",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Their low block conceded the wide areas intentionally, knowing we didn't have an aerial presence in the box to convert crosses.",
+      "gold": "tactical_analysis",
+      "predicted": "tactical_analysis"
+    },
+    {
+      "text": "Our medical staff must be training the players with sledgehammers, fire all of them.",
+      "gold": "hot_take",
+      "predicted": "hot_take"
+    },
+    {
+      "text": "Prime Maldini has posters of our backup right-back on his bedroom wall.",
+      "gold": "banter",
+      "predicted": "tactical_analysis"
+    }
+  ]
+}

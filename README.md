@@ -115,15 +115,14 @@ If a post mentions a specific checkable stat (like xG or pass completion) or a s
 
 **Base model:** `distilbert-base-uncased`
 
-**Settings:** Epochs: 3, Learning Rate: 2e-5, Batch Size: 16, Random Seed: 42
+**Settings:** Epochs: 3, Learning Rate: 2e-5, Batch Size: 16, Max Length: 128 tokens, Seed: 42, Device: `cpu` 
 
-**Anything I changed from the defaults, and why:** Kept the default hyperparameters provided in the starter notebook. With a 200-example dataset, 3 epochs at a 2e-5 learning rate prevents catastrophic forgetting of the pre-trained weights while providing sufficient gradient updates to separate the three labels.
+**Anything I changed from the defaults, and why:** Kept all default hyperparameters (3 epochs, learning rate 2e-5, batch size 16, 128 tokens per post). Since `r/soccer` comments are short (1–2 sentences), 128 tokens captures complete posts without truncation, and 3 epochs at 2e-5 prevents overfitting on 140 training examples.
 
 **Split sizes:** 
 * Train: 140 examples (70%) / Val: 30 examples (15%) / Test: 30 examples (15% held-out stratified split)
   * Test split counts: `tactical_analysis`: 10, `hot_take`: 11, `banter`: 9.
   * Every label has at least 9 examples in the test split, keeping all three classes above the 8-example variance floor.
-
 ---
 
 ## How I Used AI
@@ -163,6 +162,7 @@ After labelling the first 20 examples cold by hand, I used an AI assistant with 
 | F1 — `label_two` |  |  |  |
 
 **What I predicted before I looked:**
+I predicted that the zero-shot baseline would struggle heavily on the `banter` class because sarcastic rants and forum copy-pastas rely entirely on community context and irony rather than literal definitions, whereas the fine-tuned model will easily outperform it by learning the specific syntactic patterns of r/soccer memes. I expected the baseline to have decent overall accuracy on extreme `hot_take` posts due to obvious emotional keywords, but lag behind on nuanced tactical boundaries.
 
 **What the gap actually means:**
 
