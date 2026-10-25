@@ -1,0 +1,164 @@
+[
+  {
+    "seed": 42,
+    "n_test": 30,
+    "accuracy": 0.7,
+    "f1_macro": 0.5657894736842105,
+    "per_label": {
+      "tactical_analysis": {
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1": 0.9473684210526315,
+        "support": 9
+      },
+      "hot_take": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 12
+      },
+      "banter": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9
+      }
+    },
+    "confusion": {
+      "tactical_analysis": {
+        "tactical_analysis": 9,
+        "hot_take": 0,
+        "banter": 0
+      },
+      "hot_take": {
+        "tactical_analysis": 0,
+        "hot_take": 12,
+        "banter": 0
+      },
+      "banter": {
+        "tactical_analysis": 1,
+        "hot_take": 8,
+        "banter": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.515659749507904,
+      "mean_when_wrong": 0.40774476528167725,
+      "accuracy_most_confident_third": 1.0,
+      "accuracy_least_confident_third": 0.2,
+      "n_per_third": 10
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  },
+  {
+    "seed": 7,
+    "n_test": 30,
+    "accuracy": 0.7,
+    "f1_macro": 0.5657894736842105,
+    "per_label": {
+      "tactical_analysis": {
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1": 0.9473684210526315,
+        "support": 9
+      },
+      "hot_take": {
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.75,
+        "support": 12
+      },
+      "banter": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9
+      }
+    },
+    "confusion": {
+      "tactical_analysis": {
+        "tactical_analysis": 9,
+        "hot_take": 0,
+        "banter": 0
+      },
+      "hot_take": {
+        "tactical_analysis": 0,
+        "hot_take": 12,
+        "banter": 0
+      },
+      "banter": {
+        "tactical_analysis": 1,
+        "hot_take": 8,
+        "banter": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.4650972783565521,
+      "mean_when_wrong": 0.41119542717933655,
+      "accuracy_most_confident_third": 1.0,
+      "accuracy_least_confident_third": 0.4,
+      "n_per_third": 10
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  },
+  {
+    "seed": 2024,
+    "n_test": 30,
+    "accuracy": 0.6666666666666666,
+    "f1_macro": 0.5365591397849463,
+    "per_label": {
+      "tactical_analysis": {
+        "precision": 0.8181818181818182,
+        "recall": 1.0,
+        "f1": 0.9,
+        "support": 9
+      },
+      "hot_take": {
+        "precision": 0.5789473684210527,
+        "recall": 0.9166666666666666,
+        "f1": 0.7096774193548387,
+        "support": 12
+      },
+      "banter": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 9
+      }
+    },
+    "confusion": {
+      "tactical_analysis": {
+        "tactical_analysis": 9,
+        "hot_take": 0,
+        "banter": 0
+      },
+      "hot_take": {
+        "tactical_analysis": 1,
+        "hot_take": 11,
+        "banter": 0
+      },
+      "banter": {
+        "tactical_analysis": 1,
+        "hot_take": 8,
+        "banter": 0
+      }
+    },
+    "confidence": {
+      "mean_when_right": 0.4828799366950989,
+      "mean_when_wrong": 0.4008564352989197,
+      "accuracy_most_confident_third": 0.9,
+      "accuracy_least_confident_third": 0.2,
+      "n_per_third": 10
+    },
+    "device": "cpu",
+    "device_name": "CPU",
+    "torch_version": "2.14.1+cpu",
+    "max_length": 128
+  }
+]
