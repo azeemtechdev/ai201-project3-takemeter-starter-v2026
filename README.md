@@ -176,7 +176,7 @@ I predicted that the zero-shot baseline would struggle heavily on the `banter` c
 | 2. Tactical analysis F1 >= 0.65 | >= 0.65 | 0.947 | 0.947 | 0.900 | MET |
 | 3. Banter F1 >= 0.55 | >= 0.55 | 0.000 | 0.000 | 0.000 | MISSED |
 | 4. Max class share <= 45% | <= 45% | 39% | 39% | 39% | MET |
-| 5. Human agreement >= 70% | >= 70% | Pending | Pending | Pending | Pending |
+| 5. Human agreement >= 70% | >= 70% | 90% | 90% | 90% | MET |
 
 ### Confusion matrix
 
@@ -194,15 +194,17 @@ The model's biggest confusion is that 8 real `banter` posts were misclassified a
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 | Overall accuracy >= 0.65 | >= 0.65 | MET | Maintained an average accuracy of ~0.689 across all three seeds, consistently clearing the 0.65 floor. |
-| 2 | Tactical analysis F1 >= 0.65 | >= 0.65 | MET | Achieved high F1 scores (0.90 to 0.947) across all three seeds due to clear structural features. |
-| 3 | Banter F1 >= 0.55 | >= 0.55 | MISSED | Scored 0.000 F1 across all three seeds because the model completely failed to predict the `banter` class. |
-| 4 | Max class share <= 45% | <= 45% | MET | Dataset maintains a healthy balance with the largest class (`hot_take`) at 39%. |
-| 5 | Human agreement >= 70% | >= 70% | Pending | Awaiting completion of the staff agreement report. |
+| 1 | Overall accuracy >= 0.65 | >= 0.65 | **MET** | Maintained an average accuracy of ~0.689 across all three seeds, consistently clearing the 0.65 floor. |
+| 2 | Tactical analysis F1 >= 0.65 | >= 0.65 | **MET** | Achieved high F1 scores (0.90 to 0.947) across all three seeds due to clear structural features. |
+| 3 | Banter F1 >= 0.55 | >= 0.55 | **MISSED** | Scored 0.000 F1 across all three seeds because the model completely failed to predict the `banter` class. |
+| 4 | Max class share <= 45% | <= 45% | **MET** | Dataset maintains a healthy balance with the largest class (`hot_take`) at 39%. |
+| 5 | Human agreement >= 70% | >= 70% | **MET** | Achieved a 90% agreement rate (27/30) against the staff labeling set. |
 
 **Diagnoses**
-* **Criterion 3 Miss (`banter` F1 = 0.000):** Caused by a **genuinely hard label pair and overlapping definitions**. Sarcastic rants and hyperbole ("Masterclass in possession football while down 2-0") were labelled as `banter` in the dataset, but syntactically they use the same negative emotional vocabulary as `hot_take`. Because `banter` had fewer training examples and lacked clear lexical boundaries compared to statistical tactical terms, the model learned to ignore the class entirely and default to `hot_take`.
 
+* **Criterion 3 Miss (`banter` F1 = 0.000):** 
+  * **Cause:** A genuinely hard label pair and overlapping semantic definitions combined with a minority class constraint. 
+  * **Evidence:** My confusion matrix shows that out of 9 true `banter` posts in the test split, the model misclassified 8 as `hot_take` and 1 as `tactical_analysis`. Furthermore, our staff agreement report and training data show that sarcastic forum jokes and hyperbole ("Masterclass in possession football while down 2-0") use the exact same negative emotional vocabulary and syntax as `hot_take` posts. Because `banter` had fewer training examples and lacked clear lexical boundaries compared to statistical tactical terms, the model learned to completely abandon the class and default to `hot_take`.
 ---
 
 ## Agreement Report
