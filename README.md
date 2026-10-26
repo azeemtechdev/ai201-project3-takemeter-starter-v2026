@@ -207,29 +207,30 @@ The model's biggest confusion is that 8 real `banter` posts were misclassified a
 
 ## Agreement Report
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 27 / 30 = 90%
 
 **Disagreements**
 
 **1.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
+> *The post:* "Times are down about 3% since the shoe rules changed, so obviously the shoes are the whole story and the sport has a problem."
+> *Staff said / I said:* analytical / opinion
+> *My call, and why:* I classified this as opinion because it uses sarcastic exaggeration ("obviously the shoes are the whole story") to state a subjective viewpoint. Staff classified it as analytical because it references a specific quantitative metric ("down about 3%"). Staff is right under the rule that citing hard data shifts a post into analytical, even if framed polemically.
+> *Which pile:* Pile (a) — I focused on the sarcastic tone rather than checking for the underlying numeric data point.
 
 **2.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
+> *The post:* "Three of us ran the same session on the same day, different shoes, within 10 seconds of each other over 5 miles. I'm not saying shoes do nothing, but whatever they do was smaller than the noise between three people."
+> *Staff said / I said:* opinion / analytical
+> *My call, and why:* I labelled this analytical because it acts as an informal mini-experiment comparing three runners on the same day. Staff categorized it as opinion because it expresses a general belief rather than structured data analysis. Staff's definition relies on systematic data tracking, making this a general observation rather than an analysis.
+> *Which pile:* Pile (c) — The rule is ambiguous regarding personal trials versus formal data, and my reading of an informal test as analytical is defensible.
+
+**3.**
+> *The post:* "The club needs to stop pretending the Tuesday session is for everyone. It isn't and it never has been."
+> *Staff said / I said:* experiential / opinion
+> *My call, and why:* I called this an opinion because it's a structural argument about a club policy. Staff classed it as experiential based on immediate local participation context. Staff's definition fits better since it reflects direct first-person club involvement.
+> *Which pile:* Pile (a) — Applied the rule loosely by treating local club commentary as broad opinion.
 
 **What the pattern in my disagreements tells me:**
+The 90% agreement rate proves high consistency with the staff's standard definitions. The few disagreements stemmed from confusing personal testing or sarcastic data-dropping with pure opinions, showing a tendency to over-index on tone rather than strict structural rules.
 
 ---
 
