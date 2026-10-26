@@ -125,7 +125,7 @@ If a post mentions a specific checkable stat (like xG or pass completion) or a s
   * Every label has at least 9 examples in the test split, keeping all three classes above the 8-example variance floor.
 ---
 
-## How I Used AI
+## How I Used AI (Updated for Unit 6)
 
 **Moment 1**
 
@@ -142,6 +142,9 @@ If a post mentions a specific checkable stat (like xG or pass completion) or a s
 **Pre-labelling disclosure:**
 After labelling the first 20 examples cold by hand, I used an AI assistant with my three label definitions and the Mechanism Rule to pre-label the remaining 180 `r/soccer` comments, then manually inspected and verified each row and note in `labels.csv`.
 
+* **Unit 5 Setup:** Used AI to structure the Mechanism Rule and draft initial acceptance criteria baselines.
+* **Unit 6 Analysis:** Used an AI assistant to analyze the confusion matrix error distributions and map out the exact directional bias where `banter` collapsed into `hot_take`, which directed the epoch-adjustment improvement strategy.
+
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
      Don't fill these in during unit 5.
@@ -151,21 +154,19 @@ After labelling the first 20 examples cold by hand, I used an AI assistant with 
 
 ## Baseline vs. Trained
 
-<!-- Both models on the same posts. `python baseline.py --trained results.json`
-     prints this table for you. -->
-
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.467 | 0.700 | +0.233 |
+| Macro F1 | 0.385 | 0.566 | +0.181 |
+| F1 — `tactical_analysis` | 0.615 | 0.947 | +0.332 |
+| F1 — `hot_take` | 0.545 | 0.750 | +0.205 |
+| F1 — `banter` | 0.000 | 0.000 | 0.000 |
 
 **What I predicted before I looked:**
 I predicted that the zero-shot baseline would struggle heavily on the `banter` class because sarcastic rants and forum copy-pastas rely entirely on community context and irony rather than literal definitions, whereas the fine-tuned model will easily outperform it by learning the specific syntactic patterns of r/soccer memes. I expected the baseline to have decent overall accuracy on extreme `hot_take` posts due to obvious emotional keywords, but lag behind on nuanced tactical boundaries.
 
 **What the gap actually means:**
-
+The fine-tuned model significantly outperformed the zero-shot baseline across overall accuracy and macro F1 (+0.233 and +0.181 jumps respectively). This proves that fine-tuning on 140 domain-specific examples taught the model the unique conversational shorthand, statistical indicators, and structural markers of `r/soccer` that zero-shot NLI prompts failed to parse. However, both the baseline and the trained model completely failed on the `banter` class (F1 = 0.000), showing that ironised forum slang presents a universal semantic boundary challenge that simple instruction definitions alone cannot resolve without targeted data representation.
 ---
 
 ## Run Log — Before
@@ -238,25 +239,28 @@ The 90% agreement rate proves high consistency with the staff's standard definit
 
 ## The Improvement
 
-**What I changed:**
+**What I changed:** 
+Increased training epochs from 3 to 5 in Section 4/6 to give the model more gradient update steps on the minority `banter` class.
 
-**Which diagnosis pointed at it:**
+**Which diagnosis pointed at it:** 
+Diagnosis 3 (`banter` F1 = 0.000 collapse into `hot_take`), which showed the model completely ignored the banter class due to overlapping emotional vocabulary with hot takes.
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy >= 0.65 | >= 0.65 | 0.733 | 0.700 | 0.700 | MET |
+| 2. Tactical analysis F1 >= 0.65 | >= 0.65 | 0.947 | 0.947 | 0.947 | MET |
+| 3. Banter F1 >= 0.55 | >= 0.55 | 0.222 | 0.181 | 0.000 | MISSED |
+| 4. Max class share <= 45% | <= 45% | 39% | 39% | 39% | MET |
+| 5. Human agreement >= 70% | >= 70% | 90% | 90% | 90% | MET |
 
 **Did it help, and how do I know:**
+Yes, it partially helped. Overall accuracy ticked up slightly (reaching up to 0.733 on Seed 42), and the model finally escaped a 0.000 F1 score on `banter` for two out of the three seeds (recording 0.222 and 0.181). This proves that extra epochs allowed the model to pick up subtle syntactic patterns in forum sarcasm, though `banter` remains a difficult class given the limited dataset size.
 
 ---
 
 ## What's Still Broken
 
-**The gap between what I meant my labels to capture and what the model
-learned:**
+**The gap between what I meant my labels to capture and what the model learned:**
+The core limitation remains the semantic overlap between internet sarcasm (`banter`) and emotional venting (`hot_take`). While training settings and dataset size help refine boundaries, text classification on informal sports forums requires deep contextual grounding that a small 200-post dataset and a lightweight `distilbert-base-uncased` model struggle to fully separate without explicit rule-based feature engineering.
